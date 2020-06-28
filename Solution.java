@@ -66,6 +66,35 @@ class Rooster extends Bird {
 
 }
 
+class Parrot extends Bird {
+
+	Parrot(String animalName) {
+		super(animalName);
+	}
+
+}
+
+class Dog extends Animal {
+
+	Dog(String animalName) {
+		super(animalName);
+	}
+	void say() {
+		System.out.println("Woof, woof : " + animalName);
+	}
+
+}
+class Cat extends Animal {
+
+	Cat(String animalName) {
+		super(animalName);
+	}
+	void say() {
+		System.out.println("Meow : " + animalName);
+	}
+
+}
+
 public class Solution {
 	public static void main(String[] args) {
 		Bird bird = new Bird("Bird");
@@ -79,6 +108,11 @@ public class Solution {
 		chicken.say();
 		chicken.cannotFly();
 		Rooster rooster = new Rooster("Rooster");
+		rooster.say();
+		Dog dog = new Dog("Dog");
+		dog.say();
+		Cat cat = new Cat("Cat");
+		cat.say();
 		rooster.say();
 	}
 }
