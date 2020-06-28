@@ -79,18 +79,41 @@ class Dog extends Animal {
 	Dog(String animalName) {
 		super(animalName);
 	}
+
 	void say() {
 		System.out.println("Woof, woof : " + animalName);
 	}
 
 }
+
 class Cat extends Animal {
 
 	Cat(String animalName) {
 		super(animalName);
 	}
+
 	void say() {
 		System.out.println("Meow : " + animalName);
+	}
+
+}
+
+class Fish extends Animal {
+
+	Fish(String animalName) {
+		super(animalName);
+	}
+
+	void walk() {
+		System.out.println("i am not walking: " + animalName);
+	}
+
+	void sing() {
+		System.out.println("i am not singing: " + animalName);
+	}
+
+	void swim() {
+		System.out.println("can swim: " + animalName);
 	}
 
 }
@@ -114,5 +137,9 @@ public class Solution {
 		Cat cat = new Cat("Cat");
 		cat.say();
 		rooster.say();
+		Fish fish = new Fish("Fish");
+		fish.sing();
+		fish.walk();
+		fish.swim();
 	}
 }
