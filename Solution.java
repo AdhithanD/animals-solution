@@ -1,30 +1,71 @@
 class Animal {
+	String animalName;
+
+	Animal(String animalName) {
+		this.animalName = animalName;
+	}
+
 	void walk() {
-		System.out.println("I am walking");
+		System.out.println("I am walking: " + animalName);
 	}
 }
 
 class Bird extends Animal {
-	String flyMsg, singMsg;
-	Bird(String flyMsg, String singMsg){
-		this.flyMsg = flyMsg;
-		this.singMsg = singMsg;
+	Bird(String animalName) {
+		super(animalName);
 	}
+
 	void fly() {
-		System.out.println(flyMsg);
+		System.out.println("i am flying: " + animalName);
 	}
 
 	void sing() {
-		System.out.println(singMsg);
+		System.out.println("i am singing: " + animalName);
+	}
+
+	void swim() {
+		System.out.println("can swim: " + animalName);
+	}
+
+	void cannotFly() {
+		System.out.println("cannot fly: " + animalName);
+	}
+
+}
+
+class Duck extends Bird {
+
+	Duck(String animalName) {
+		super(animalName);
+	}
+
+	void say() {
+		System.out.println("Quack, quack: " + animalName);
 	}
 }
 
+class Chicken extends Bird {
+	Chicken(String animalName) {
+		super(animalName);
+	}
+
+	void say() {
+		System.out.println("Cluck, cluck : " + animalName);
+	}
+
+}
 
 public class Solution {
 	public static void main(String[] args) {
-		Bird bird = new Bird("I am flying", "I am singing");
+		Bird bird = new Bird("Bird");
 		bird.walk();
 		bird.fly();
 		bird.sing();
+		Duck duck = new Duck("Duck");
+		Chicken chicken = new Chicken("Chicken");
+		duck.say();
+		duck.swim();
+		chicken.say();
+		chicken.cannotFly();
 	}
 }
