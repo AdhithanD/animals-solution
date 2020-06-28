@@ -146,6 +146,17 @@ class Clownfish extends Fish {
 	}
 }
 
+class Dolphins extends Animal {
+
+	Dolphins(String animalName) {
+		super(animalName);
+	}
+	
+	void swim() {
+		System.out.println("can swim: " + animalName);
+	}
+}
+
 public class Solution {
 	public static void main(String[] args) {
 		Bird bird = new Bird("Bird");
@@ -173,5 +184,7 @@ public class Solution {
 		Clownfish clownfish = new Clownfish("Clownfish");
 		shark.specialize("grey", "large", "eat other fish");
 		clownfish.specialize("orange", "small", "make jokes");
+		Dolphins dolphins = new Dolphins("Dolphins");
+		dolphins.swim();
 	}
 }
