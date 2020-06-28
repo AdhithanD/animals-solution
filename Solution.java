@@ -116,6 +116,34 @@ class Fish extends Animal {
 		System.out.println("can swim: " + animalName);
 	}
 
+	void specialize(String colour, String size, String others) {
+		System.out.println(animalName + " Colour:" + colour + ", Size: " + size + ",  " + others);
+	}
+
+}
+
+class Shark extends Fish {
+
+	Shark(String animalName) {
+		super(animalName);
+	}
+
+	@Override
+	void specialize(String colour, String size, String others) {
+		super.specialize(colour, size, others);
+	}
+}
+
+class Clownfish extends Fish {
+
+	Clownfish(String animalName) {
+		super(animalName);
+	}
+
+	@Override
+	void specialize(String colour, String size, String others) {
+		super.specialize(colour, size, others);
+	}
 }
 
 public class Solution {
@@ -141,5 +169,9 @@ public class Solution {
 		fish.sing();
 		fish.walk();
 		fish.swim();
+		Shark shark = new Shark("Shark");
+		Clownfish clownfish = new Clownfish("Clownfish");
+		shark.specialize("grey", "large", "eat other fish");
+		clownfish.specialize("orange", "small", "make jokes");
 	}
 }
