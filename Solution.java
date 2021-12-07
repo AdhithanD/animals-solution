@@ -11,6 +11,7 @@ class Animal {
 
 	void walk() {
 		System.out.println("I am walking: " + animalName);
+		System.out.Println("TestAAAAAAAAAAAAAAAAAAAAA");
 	}
 }
 
