@@ -13,6 +13,7 @@ class Animal {
 		System.out.println("I am walking: " + animalName);
 		System.out.Println("TestAAAAAAAAAAAAAAAAAAAAA");
 		System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+		System.out.println("A2A2A2A2A222222222222222222222");
 	}
 }
 
